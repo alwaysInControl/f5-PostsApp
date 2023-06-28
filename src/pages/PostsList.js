@@ -4,9 +4,9 @@ import axios from "axios";
 const PostsList = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(response => setPosts(response.data))
-    })
+        axios.get('https://dummyjson.com/posts')
+            .then(response => setPosts(response.data.posts))
+    }, [])
 
     return (
         <div>
